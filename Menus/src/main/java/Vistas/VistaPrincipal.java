@@ -20,6 +20,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form VistaPrincipal
      */
+    private Vector vector;
     public VistaPrincipal() {
         initComponents();
         addActionListeners();
@@ -367,6 +368,5 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jOrdenamientos;
     private javax.swing.JMenu jRecursivos;
     private javax.swing.JMenu jVector;
-    private Vector vector;
     // End of variables declaration//GEN-END:variables
 }
