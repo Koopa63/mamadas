@@ -19,8 +19,8 @@ public class Main {
         
         Algoritmos.Vector obj = new Algoritmos.Vector();
         
-        int[] vector = obj.llamaVector();
-        System.out.println(vector);
+        //int[] vector = obj.llamaVector();
+        //System.out.println(vector);
         
         VistaPrincipal v = new VistaPrincipal();
         v.setVisible(true);

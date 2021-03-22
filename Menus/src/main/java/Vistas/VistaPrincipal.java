@@ -4,8 +4,12 @@
  * and open the template in the editor.
  */
 package Vistas;
-import Algoritmos.*;
-import javax.swing.JOptionPane;
+
+import Algoritmos.Vector;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
 
 /**
  *
@@ -18,6 +22,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
      */
     public VistaPrincipal() {
         initComponents();
+        addActionListeners();
+        vector=new Vector();
     }
 
     /**
@@ -223,6 +229,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jMenuItem3.setText("Llenar vector aleatorio");
         jVector.add(jMenuItem3);
 
+
         jMenuBar1.add(jVector);
 
         setJMenuBar(jMenuBar1);
@@ -270,9 +277,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jVectorActionPerformed
 
     private void iShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iShowActionPerformed
-        
-        vector = 
-        JOptionPane.showMessageDialog(this, "es"+);
+
+        //vector =
+        //JOptionPane.showMessageDialog(this, "es"+);
         
         
     }//GEN-LAST:event_iShowActionPerformed
@@ -308,10 +315,18 @@ public class VistaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VistaPrincipal().setVisible(true);
+
             }
         });
     }
 
+    public  void addActionListeners(){
+        jMenuItem3.addActionListener(e -> {
+            System.out.println(e.getActionCommand());
+            List<Integer> listaNumeros=vector.randomListFill();
+            listaNumeros.forEach(numero->System.out.println(numero));
+        });
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem iBucket;
     private javax.swing.JMenuItem iBurbuja;
@@ -351,5 +366,6 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jOrdenamientos;
     private javax.swing.JMenu jRecursivos;
     private javax.swing.JMenu jVector;
+    private Vector vector;
     // End of variables declaration//GEN-END:variables
 }
