@@ -327,6 +327,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
             listaNumeros.forEach(numero->System.out.println(numero));
         });
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem iBucket;
     private javax.swing.JMenuItem iBurbuja;
